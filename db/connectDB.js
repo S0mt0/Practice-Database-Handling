@@ -7,7 +7,7 @@ let firstAdmin = {
   username: "Mariam Spice",
   password: "testingPassword123...yeso",
   role: "manager",
-  imgURL: "http://myimages.com/jshay",
+  imgURL: "http://myimages.com/jsh",
 };
 
 const connectDB = async () => {
