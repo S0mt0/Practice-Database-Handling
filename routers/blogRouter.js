@@ -1,8 +1,8 @@
 const { Router } = require("express");
 const router = Router();
-const getAdminController = require("../controllers/adminController");
+const getBlogController = require("../controllers/blogController");
 
-router.route("/static").get(getAdminController);
+router.route("/").get(getBlogController);
 // .post(createAdmin)
 // .delete(removeAdmin)
 // .patch(updateAdmin);
