@@ -37,6 +37,7 @@ const port = process.env.PORT || 4000;
 
 const start = async () => {
   try {
+    // Listen on port only if connection to databse is successful.
     await connect(process.env.MONGO_URI);
     app.listen(port, () =>
       console.log(`Server is up and listening on port: ${port}`)
