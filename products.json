@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Samsung",
+    "model": "S8 Galaxy",
+    "category": "Phones",
+    "description": "The sun sets over the horizon, casting a warm golden glow on the tranquil sea. Birds soar through the sky, their wings spread wide in graceful flight. Trees sway gently in the breeze, whispering secrets to one another.",
+    "price": 87000,
+    "rating": 4.3
+  },
+  {
+    "name": "iPhone",
+    "model": "11 pro Max",
+    "category": "Phones",
+    "description": "The sun sets over the horizon, casting a warm golden glow on the tranquil sea. Birds soar through the sky, their wings spread wide in graceful flight. Trees sway gently in the breeze, whispering secrets to one another.",
+    "price": 16000,
+    "rating": 4.7
+  },
+  {
+    "name": "Airpod pro",
+    "model": "pro airpod",
+    "category": "accessory",
+    "description": "The sun sets over the horizon, casting a warm golden glow on the tranquil sea. Birds soar through the sky, their wings spread wide in graceful flight. Trees sway gently in the breeze, whispering secrets to one another.",
+    "price": 87000,
+    "rating": 4.3
+  },
+  {
+    "name": "Generator",
+    "model": "S8 Galaxy",
+    "category": "Phones",
+    "description": "The sun sets over the horizon, casting a warm golden glow on the tranquil sea. Birds soar through the sky, their wings spread wide in graceful flight. Trees sway gently in the breeze, whispering secrets to one another.",
+    "price": 87000,
+    "rating": 4.3
+  }
+]
