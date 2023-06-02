@@ -1,4 +1,4 @@
-const { admin } = require("../models/models");
+const { admin } = require("./models/models");
 const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, "../.env") });
 const { connect } = require("mongoose");
@@ -24,7 +24,7 @@ const connectDB = async () => {
   }
 };
 
-connectDB();
+// connectDB();
 
 // connect(process.env.MONGO_URI)
 //   .then(() => {
@@ -45,3 +45,5 @@ connectDB();
 //   .catch((err) => {
 //     console.log(err);
 //   });
+
+// console.log(admin);
