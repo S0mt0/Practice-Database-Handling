@@ -5,10 +5,12 @@ const orderSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-  orderDate: {
+
+  createdAt: {
     type: Date,
-    required: [true, "Time of order must be provided."],
+    default: Date.now(),
   },
+
   orderItems: {
     type: [
       {
@@ -26,15 +28,17 @@ const orderSchema = new mongoose.Schema({
         },
       },
     ],
+
     validate: {
       validator: function (orderItems) {
         return orderItems.length > 0;
       },
       message: "At least one order must be made.",
     },
+
     shipmentAddress: {
       type: "String",
-      required: [true, "Please provide a shipment address."],
+      default: "Office Pickup",
     },
   },
 });

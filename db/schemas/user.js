@@ -5,16 +5,13 @@ const userSchema = new Schema({
     type: String,
     required: [true, "Username must be provided"],
   },
+
   password: {
     type: String,
     required: [true, "User password must be provided"],
   },
-  role: {
-    type: String,
-    default: "user",
-  },
+
   imgURL: String,
-  // profileImg: Buffer,
 });
 
 module.exports = userSchema;

@@ -1,5 +1,6 @@
 // imports
-const app = require("express")();
+const express = require("express");
+const app = express();
 const { connect } = require("mongoose");
 require("dotenv").config();
 // Routers
@@ -19,9 +20,6 @@ app.get("/", (req, res) => {
   );
 });
 
-// custom functional middlewares
-app.use(errorHandlerMiddleware);
-
 // ROUTES
 // search route
 //app.use("/api/v1/search", searchRouter); //This route handles only all Http GET requests i.e. Retrieval of data from the database, mainly for display of data on the UI.
@@ -32,8 +30,9 @@ app.use("/api/v1/dashboard", adminRouter); //This route is restricted to only ad
 // users route
 //app.use("/api/v1/user", userRouter); //This route is used to handle order requests from users. Since "orders" is a collection on the database of which instances/models of it can only be created by a user, users are able to Create, Update, and Delete unique orders by sending the corresponding Http requests which will be handled on the frontend.
 
-// custom functional middlewares
+// functional middlewares
 app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware);
 
 // Start app
 const port = process.env.PORT || 4000;

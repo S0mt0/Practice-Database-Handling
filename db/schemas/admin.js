@@ -5,26 +5,25 @@ const adminSchema = new mongoose.Schema({
     type: String,
     required: [true, "Admin name must be provided"],
   },
+
   password: {
     type: String,
     required: [true, "Admin password must be provided"],
   },
+
   role: {
     type: String,
-    validate: {
-      validator: (value) => {
-        const allowedRoles = ["admin", "sales", "customer service", "manager"];
-        return allowedRoles.some(
-          (role) => role.toLowerCase() === value.toLowerCase()
-        );
-      },
-      message:
-        "-{VALUE}- is not an authorized role. Please choose a valid role.",
+    enum: {
+      values: ["CEO", "manager"],
+      message: "-{VALUE}- is not supported. Please choose a valid role.",
     },
-    required: [true, "Role must be specified."],
+    required: [true, "Role is required"],
   },
-  imgURL: String,
-  // profileImg: Buffer,
+
+  imgURL: {
+    type: String,
+    default: "http://noPhotos.com",
+  },
 });
 
 module.exports = adminSchema;

@@ -4,10 +4,10 @@ require("dotenv").config({ path: path.join(__dirname, "../.env") });
 const { connect } = require("mongoose");
 
 let firstAdmin = {
-  username: "Mariam Spice",
-  password: "testingPassword123...yeso",
-  role: "manager",
-  imgURL: "http://myimages.com/jsh",
+  username: "Churchill",
+  password: "testing",
+  role: "CEO",
+  imgURL: "http://myimages.com/",
 };
 
 const connectDB = async () => {
@@ -24,7 +24,7 @@ const connectDB = async () => {
   }
 };
 
-// connectDB();
+connectDB();
 
 // connect(process.env.MONGO_URI)
 //   .then(() => {

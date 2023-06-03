@@ -1,5 +1,5 @@
-const { Router } = require("express");
-const router = Router();
+const express = require("express");
+const router = express.Router();
 // import controllers
 const {
   getAdminController,
@@ -8,9 +8,10 @@ const {
   deleteAdminController,
 } = require("../controllers");
 
-//route to handle getting admin by id.
-// router.route("/admin/:id").get(getAdminController);
+router.use(express.json());
 
+//route to handle getting admin by id.
+router.route("/admin/:id").get(getAdminController);
 // route to handle requests to the 'admins collection'.
 router
   .route("/admin")
